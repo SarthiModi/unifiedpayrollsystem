@@ -2,9 +2,10 @@ package repository;
 import config.DBConnection;
 import java.sql.*;
 
-public class AdminRepository {
+public class AdminRepository 
+{
     public void registerAdmin(int companyId,String username,String password){
-    try{
+    try{ 
         Connection con = DBConnection.getConnection();
         String checkSql = "SELECT * FROM admin WHERE company_id=?";
         PreparedStatement checkPs = con.prepareStatement(checkSql);
