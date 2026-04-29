@@ -10,9 +10,9 @@ public class CompanyRepository {
         ps.setString(1,name);
         ps.setString(2,type);
         ps.executeUpdate();
-        ResultSet rs = ps.getGeneratedKeys();
+        ResultSet rs=ps.getGeneratedKeys();
         if(rs.next()){
-            int id = rs.getInt(1);
+            int id=rs.getInt(1);
             System.out.println("Company created. Your Company ID: " + id);
             return id;
         }
