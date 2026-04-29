@@ -7,14 +7,15 @@ import config.DBConnection;
 
 public class DepartmentRepository {
     public void addDepartment(int companyId, String name, double budget){
-    try{
+    try
+        {
         Connection con = DBConnection.getConnection();
         name = name.trim().toLowerCase();
         String checkSql = "SELECT * FROM department WHERE company_id=? AND LOWER(dept_name)=?";
         PreparedStatement checkPs = con.prepareStatement(checkSql);
         checkPs.setInt(1, companyId);
         checkPs.setString(2, name);
-        ResultSet rs = checkPs.executeQuery();
+        ResultSet rs=checkPs.executeQuery();
         if(rs.next()){
             System.out.println("Department already exists in this company!");
             return;
