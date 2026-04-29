@@ -9,7 +9,7 @@ public class EmployeeRepository {
             String sql = "SELECT * FROM employee WHERE email=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1,email);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs =ps.executeQuery();
             return rs.next();
         }catch(Exception e){
             return false;
