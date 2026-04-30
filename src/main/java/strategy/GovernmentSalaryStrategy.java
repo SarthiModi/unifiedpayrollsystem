@@ -1,6 +1,7 @@
 package strategy;
 import model.Employee;
-public class GovernmentSalaryStrategy implements SalaryStrategy {
+public class GovernmentSalaryStrategy implements SalaryStrategy 
+{
     @Override
     public double calculate(Employee e){
 
