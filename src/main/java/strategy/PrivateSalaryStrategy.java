@@ -2,7 +2,8 @@ package strategy;
 import model.Employee;
 public class PrivateSalaryStrategy implements SalaryStrategy {
     @Override
-    public double calculate(Employee e){
+    public double calculate(Employee e)
+    {
         double base = e.getSalary();
         double hra = base * e.getHraPercent() / 100;
         double da  = base * e.getDaPercent() / 100;
